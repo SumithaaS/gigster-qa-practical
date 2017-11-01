@@ -1,0 +1,10 @@
+{
+  "name": "tests",
+  "version": "0.0.1",
+  "scripts":{
+    "test": "python test.py"
+  },
+  "dependencies": {
+    "python-shell": "^0.4.0"
+  }
+}
