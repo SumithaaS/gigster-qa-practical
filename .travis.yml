@@ -6,4 +6,4 @@ python:
   - "3.3"
   - "3.4"
 
-script: tests/python test.py
+script: python test.py
