@@ -6,7 +6,7 @@ driver.set_page_load_timeout(30)
 driver.get("http://0.0.0.0/")
 
 #signup
-driver.find_element_by_id("signupUsername").send_keys("Tommmmm Sawyer")
+driver.find_element_by_id("signupUsername").send_keys("Tom Sawyer")
 driver.find_element_by_id("signupPassword").send_keys("1234")
 driver.find_element_by_id("signupButton").click()
 
