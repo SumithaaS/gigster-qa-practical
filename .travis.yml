@@ -5,19 +5,24 @@ python:
   - "3.2"
   - "3.3"
   - "3.4"
+
+before_install:
+  - export CHROME_BIN=/usr/bin/google-chrome
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sudo apt-get update
+  - sudo apt-get install -y libappindicator1 fonts-liberation
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i google-chrome*.deb
+
 install:
   - pip install selenium
-  - travis_wait mvn install
 
 
 addons:
   chrome: stable
 
-addons:
-  browserstack:
-    username: "rocknroll1"
-    access_key: "zZ3BXJsVhox4gJKxLGxZ"
-    
+
 before_install:
   - google-chrome-stable --headless --no-sandbox --remote-debugging-port=9222 http://localhost:80
 before_script: cd tests
