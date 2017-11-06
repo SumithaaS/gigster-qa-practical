@@ -13,6 +13,11 @@ install:
 addons:
   chrome: stable
 
+addons:
+  browserstack:
+    username: "rocknroll1"
+    access_key: "zZ3BXJsVhox4gJKxLGxZ"
+    
 before_install:
   - google-chrome-stable --headless --no-sandbox --remote-debugging-port=9222 http://localhost:80
 before_script: cd tests
